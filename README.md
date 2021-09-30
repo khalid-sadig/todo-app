@@ -46,8 +46,6 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Styled Components](https://styled-components.com/) - For styles
-
 
 ### What I learned
 
