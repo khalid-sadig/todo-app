@@ -1,19 +1,11 @@
 import TodoApp from "./components/TodoApp"
-import headerImage from "./images/bg-mobile-light.jpg" 
-
-
-var headerStyle = {
-backgroundImage:`url(${headerImage})`,
-backgroundRepeat: "no-repeat",
-height: "100vh",
-maxWidth:"100%"
-}
 
 
 
 function App() {
   return (
-      <div style={headerStyle}>
+      <div className={'app'}>
+        <img src="./images/bg-mobile-light.jpg" alt="header"/>
                 <TodoApp/>
         </div>
   );
