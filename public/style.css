@@ -42,19 +42,24 @@ font-size: 16px;
 body {
     font-size: 1.125rem;
     font-family: 'Josefin Sans' , sans-serif;
+    background-color: var(--lightGrayishBlue);
 }
 
 /* App componenet */
 
-.app > img {
+.app > img.mobile-header {
     position: absolute;
     z-index: -10;
-    max-width: 100%
+    
+}
+
+.app > img.desktop-header {
+display:none;
 }
 
     /*TodoApp*/
     .TodoApp {
-        width: 90vw;
+        width: clamp(0px, 90vw, calc(1440px/3));
         margin: 0 auto;
         padding-top: 5vh; 
     }
@@ -100,7 +105,8 @@ body {
     display:flex;
     justify-content: space-evenly;
     margin-top: 3vh;
-    background-color: white;
+--lightGrayishBlue: hsl(233, 11%, 84%);
+    background-color: var(--veryLightGray);
     height: 7vh;
     align-items:center
 }
@@ -109,14 +115,30 @@ body {
         display: flex;
         height: "7vh";
         padding: 12px; 
-        background-color: white;
+        background-color: var(--veryLightGray);
         justify-content : space-between;
+        margin-bottom: 2px;
     }
 
     .TodoItem  input[type='checkbox'] {
         margin-right: 15px;
     }
     
+    @media (min-width: 375px){ 
+                
+        .app > img.mobile-header {
+            display:none;
+        }
+        .app > img.desktop-header{
+            display:block;
+            position: absolute;
+            z-index: -10;
+          
+            
+        }
+    
+    }
+
     
     
     
