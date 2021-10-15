@@ -1,13 +1,12 @@
 import TodoItem  from "./TodoItem"
 
-function ListTodo(){
+function ListTodo(props){
+     
     return (
         <div className = {'ListTodo'}>
-            <TodoItem/>
-            <TodoItem/>
-            <TodoItem/>
-            <TodoItem/>
-            <TodoItem/>
+           {
+               props.todoList.map((todo, index) => <TodoItem todoText ={todo.text} key ={todo.id} index = {index} onTodoDeletion = {props.onTodoDeletion}/>)
+           }
             <div className = {'list-footer'}>
                 <span>all</span>
                 <span>active</span>

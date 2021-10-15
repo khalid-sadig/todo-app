@@ -1,12 +1,17 @@
 
-function TodoItem(){
+function TodoItem(props){
+
+    function handleClick(){
+        props.onTodoDeletion(props.index)
+    }
+
     return (
         <div className = {'TodoItem'}>
             <div>
                 <input  type ="checkbox" />
-                <span >some text</span>
+                <span >{props.todoText}</span>
             </div>
-            <button>delete</button>
+            <button onClick ={handleClick}>delete</button>
         </div>
     )
 }

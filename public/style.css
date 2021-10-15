@@ -81,7 +81,7 @@ display:none;
     }
     /* AddTodo */
     
-    .AddTodo {
+    input.AddTodo {
     all: unset;
     width: 80%;
     display :block;
@@ -92,7 +92,21 @@ display:none;
     background: transparent;
     color: white;
     border-bottom: 1px solid white;
-}
+    }
+
+    .AddTodo + .addButton {
+        display: block;
+        margin: 0 auto;
+        margin-top: 2vh;
+        padding: 10px;
+        
+    }
+
+    .addButton:hover {
+        background-color: transparent;
+        color: white;
+    }
+
     /* ListTodo */
     
    .ListTodo {
@@ -123,7 +137,15 @@ display:none;
     .TodoItem  input[type='checkbox'] {
         margin-right: 15px;
     }
-    
+
+    .TodoItem button {
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    .TodoItem button:hover {
+        color:hsl(0, 86%, 57%)
+    }
     @media (min-width: 375px){ 
                 
         .app > img.mobile-header {
