@@ -26,7 +26,7 @@ function TodoApp(){
 
   function addTodo(){
     setTodoList((prev) => {
-      return [...prev,{text: todoText,id: prev.length + 1}]
+      return [...prev,{id: prev.length + 1, text: todoText, completed: false}]
     })
 
     setTodoText('')
@@ -39,6 +39,14 @@ function TodoApp(){
       return [...newTodoList]
     })
   }
+
+  function handleTaskStatusChange(completed, index){
+    setTodoList(prev => {
+      let newTodoList = [...prev]
+      newTodoList[index].completed = !completed
+      return [...newTodoList]
+    })  
+  }
     return(
       <div className = {'TodoApp'}>
           <div className ={'flex-container'}>
@@ -46,7 +54,7 @@ function TodoApp(){
             <img className = {'moon'} src={'../images/icon-moon.svg'} alt ="toggle mode"/>
           </div>
           <AddTodo todoText = {todoText} onTodoTextChange = {handleTodoTextChange} onAddTodo = {addTodo}/>
-          <ListTodo todoList ={todoList} onTodoDeletion = {handleTodoDeletion} />
+          <ListTodo todoList ={todoList} onTodoDeletion = {handleTodoDeletion} onTaskStatusChange = {handleTaskStatusChange}/>
       </div>
     )
 }
