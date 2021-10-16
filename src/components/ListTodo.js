@@ -25,7 +25,7 @@ function ListTodo(props){
                                 return (
                                     <TodoItem 
                                         todoText ={todo.text}
-                                        key ={todo.id} 
+                                        key ={index} 
                                         index = {index} 
                                         onTodoDeletion = {props.onTodoDeletion} 
                                         completed ={todo.completed} 
@@ -39,7 +39,7 @@ function ListTodo(props){
                                 return(
                                     <TodoItem 
                                         todoText ={todo.text}
-                                        key ={todo.id} 
+                                        key ={index} 
                                         index = {index} 
                                         onTodoDeletion = {props.onTodoDeletion} 
                                         completed ={todo.completed} 

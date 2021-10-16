@@ -17,12 +17,12 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 
 Users should be able to:
 
-- View the optimal layout for the app depending on their device's screen size (Done)
-- See hover states for all interactive elements on the page (not yet)
-- Add new todos to the list (Done)
-- Mark todos as complete (not yet)
-- Delete todos from the list (Done)
-- Filter by all/active/complete todos (not yet)
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Add new todos to the list 
+- Mark todos as complete
+- Delete todos from the list
+- Filter by all/active/complete todos 
 - Clear all completed todos (not yet)
 - Toggle light and dark mode(not yet)
 - **Bonus**: Drag and drop to reorder items on the list (not yet)
