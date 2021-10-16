@@ -1,18 +1,20 @@
 
 function TodoItem(props){
+    const index = props.index
 
     function handleClick(){
-        props.onTodoDeletion(props.index)
+        props.onTodoDeletion(index)
     }
 
-    function handleTaskStatus(e){
-        props.onTaskStatusChange(e.target.checked , props.index)
+    function handleTaskStatusChange(e){
+        console.log(props.completed)
+        props.onTaskStatusChange(props.completed , index)
     }
 
     return (
         <div className = {'TodoItem'}>
             <div>
-                <input   style ={{display : 'none'}}type ="checkbox"  id = {props.index} checked = {props.isChecked} onChange = {handleTaskStatus}/>
+                <input   type ="checkbox"  id = {props.index} checked = {props.completed} onChange = {handleTaskStatusChange}/>
                 <label htmlFor= {props.index}> {props.todoText} </label>
             </div>
             <button onClick ={handleClick}>Delete</button>

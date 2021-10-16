@@ -143,11 +143,18 @@ display:none;
 
     .TodoItem input:checked + label {
         text-decoration: line-through;
-        color: grey;
+        color: lightgrey;
     }
 
     .TodoItem label {
         padding: 10px;
+        cursor: pointer;
+        text-transform: capitalize;
+    }
+    
+    .TodoItem label:hover {
+        color: grey;
+      
     }
     
 

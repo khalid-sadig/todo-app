@@ -7,19 +7,6 @@ function TodoApp(){
   const [todoText, setTodoText] = useState('What needs to be done?')
   const [todoList, setTodoList] = useState([])
 
-  // const todoList = [
-  //   {
-  //     text: 'todo 1',
-  //     id: 0
-  //   },
-  //   {
-  //     text: 'todo 2',
-  //     id: 1
-  //   }
-  // ]
-
-
-
   function handleTodoTextChange(newTodoText){
     setTodoText(newTodoText)
   }
