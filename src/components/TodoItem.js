@@ -14,7 +14,7 @@ function TodoItem(props){
     return (
         <div className = {'TodoItem'}>
             <div>
-                <input   type ="checkbox"  id = {props.index} checked = {props.completed} onChange = {handleTaskStatusChange}/>
+                <input  style ={{display: 'none'}} type ="checkbox"  id = {props.index} checked = {props.completed} onChange = {handleTaskStatusChange}/>
                 <label htmlFor= {props.index}> {props.todoText} </label>
             </div>
             <button onClick ={handleClick}>Delete</button>
