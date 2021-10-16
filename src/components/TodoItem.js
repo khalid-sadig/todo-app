@@ -7,7 +7,6 @@ function TodoItem(props){
     }
 
     function handleTaskStatusChange(e){
-        console.log(props.completed)
         props.onTaskStatusChange(props.completed , index)
     }
 

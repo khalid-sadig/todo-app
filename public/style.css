@@ -79,6 +79,31 @@ display:none;
       letter-spacing: 0.3rem;
       color: white;
     }
+
+    
+    .filter {
+        display:flex;
+        justify-content: space-evenly;
+        margin-top: 3vh;
+    --lightGrayishBlue: hsl(233, 11%, 84%);
+        background-color: var(--veryLightGray);
+        height: 7vh;
+        align-items:center
+    }
+
+    .filter button {
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        text-transform: capitalize;
+    }
+
+    .filter button:hover{
+        color : grey;
+
+    }
+
+
     /* AddTodo */
     
     input.AddTodo {
@@ -118,15 +143,6 @@ display:none;
     margin-top: 7vh;
 }
 
-    .list-footer {
-    display:flex;
-    justify-content: space-evenly;
-    margin-top: 3vh;
---lightGrayishBlue: hsl(233, 11%, 84%);
-    background-color: var(--veryLightGray);
-    height: 7vh;
-    align-items:center
-}
     /* TodoItem */
     .TodoItem {
         display: flex;
@@ -156,8 +172,6 @@ display:none;
         color: grey;
       
     }
-    
-
     .TodoItem button {
         border: none;
         cursor: pointer;

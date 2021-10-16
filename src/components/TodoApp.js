@@ -6,6 +6,8 @@ import ListTodo from "./ListTodo"
 function TodoApp(){
   const [todoText, setTodoText] = useState('What needs to be done?')
   const [todoList, setTodoList] = useState([])
+  const [filter, setFilter] = useState('all')
+  
 
   function handleTodoTextChange(newTodoText){
     setTodoText(newTodoText)
@@ -13,7 +15,7 @@ function TodoApp(){
 
   function addTodo(){
     setTodoList((prev) => {
-      return [...prev,{id: prev.length + 1, text: todoText, completed: false}]
+      return [...prev,{text: todoText, completed: false}]
     })
 
     setTodoText('')
@@ -34,6 +36,10 @@ function TodoApp(){
       return [...newTodoList]
     })  
   }
+
+  function handleFilterClick(e){
+    setFilter(e.target.textContent)
+  }
     return(
       <div className = {'TodoApp'}>
           <div className ={'flex-container'}>
@@ -41,7 +47,12 @@ function TodoApp(){
             <img className = {'moon'} src={'../images/icon-moon.svg'} alt ="toggle mode"/>
           </div>
           <AddTodo todoText = {todoText} onTodoTextChange = {handleTodoTextChange} onAddTodo = {addTodo}/>
-          <ListTodo todoList ={todoList} onTodoDeletion = {handleTodoDeletion} onTaskStatusChange = {handleTaskStatusChange}/>
+          <ListTodo filter ={filter} todoList ={todoList} onTodoDeletion = {handleTodoDeletion} onTaskStatusChange = {handleTaskStatusChange}/>
+          <div className = {'filter'}>
+                <button onClick ={handleFilterClick}>all</button>
+                <button onClick = {handleFilterClick}>active</button>
+                <button onClick = {handleFilterClick}>completed</button>
+            </div>
       </div>
     )
 }
