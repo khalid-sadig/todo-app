@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+html {
+  /* Colors */
+  --veryLightGray: hsl(0, 0%, 98%);
+  --darkGrayishBlue: hsl(236, 9%, 61%);
+  --veryDarkDesaturatedBlue: hsl(236, 34%, 24%);
+  --veryDarkGrayishBlue: hsl(233, 14%, 35%);
+  /* hover */
+  --lightGrayishBlue: hsl(236, 33%, 92%);
+  /*  */
+
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.125rem;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--veryDarkDesaturatedBlue);
+}
+
+/* App componenet */
+
+/*TodoApp*/
+.TodoApp {
+  width: clamp(0px, 90vw, calc(1440px / 3));
+  margin: 0 auto;
+  padding-top: 5vh;
+}
+
+.background {
+  background-image: url("./images/bg-mobile-light.jpg");
+  padding: 20px;
+  background-size: cover;
+}
+
+.app-header {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: white;
+  text-align: center;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3vh;
+
+  background-color: var(--veryLightGray);
+  height: 7vh;
+  align-items: center;
+}
+
+.filter button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: capitalize;
+}
+
+.filter button:hover {
+  color: grey;
+}
+
+/* AddTodo */
+
+input.AddTodo {
+  all: unset;
+  width: 80%;
+  display: block;
+  margin: auto;
+  height: 100%;
+  margin-top: 5vh;
+  font-size: 1rem;
+  background: transparent;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.AddTodo + .addButton {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2vh;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.addButton:hover {
+  background-color: transparent;
+  color: white;
+}
+
+/* ListTodo */
+
+.ListTodo {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 7vh;
+}
+
+/* TodoItem */
+.TodoItem {
+  display: flex;
+  height: "7vh";
+  padding: 12px;
+  background-color: var(--veryLightGray);
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.TodoItem input[type="checkbox"] {
+  margin-right: 15px;
+}
+
+.TodoItem input:checked + label {
+  text-decoration: line-through;
+  color: lightgrey;
+}
+
+.TodoItem label {
+  padding: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.TodoItem label:hover {
+  color: grey;
+}
+.TodoItem button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.TodoItem button:hover {
+  color: hsl(0, 86%, 57%);
+}
