@@ -1,200 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
-html{
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+html {
+  /* Colors */
+  --veryLightGray: hsl(0, 0%, 98%);
+  --darkGrayishBlue: hsl(236, 9%, 61%);
+  --veryDarkDesaturatedBlue: hsl(236, 34%, 24%);
+  --veryDarkGrayishBlue: hsl(233, 14%, 35%);
+  /* hover */
+  --lightGrayishBlue: hsl(236, 33%, 92%);
+  /*  */
 
-/* Colors */
-
- /* Primary */
-
---brightBlue: hsl(220, 98%, 61%);
---checkBackground: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
-
-/* Neutral */
-
-/* Light Theme */
-
---veryLightGray: hsl(0, 0%, 98%);
---veryLightGrayishBlue: hsl(236, 33%, 92%);
---lightGrayishBlue: hsl(233, 11%, 84%);
---darkGrayishBlue: hsl(236, 9%, 61%);
---veryDarkGrayishBlue: hsl(235, 19%, 35%);
- 
-/* Dark Theme */
-
---veryDarkBlue: hsl(235, 21%, 11%);
---veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
---lightGrayishBlue: hsl(234, 39%, 85%);
-/* hover */
---lightGrayishBlue: hsl(236, 33%, 92%); 
-/*  */
---darkGrayishBlue: hsl(234, 11%, 52%);
---veryDarkGrayishBlue: hsl(233, 14%, 35%);
---veryDarkGrayishBlue: hsl(237, 14%, 26%);
-    
-font-size: 16px;
+  font-size: 16px;
 }
 
-*, *::after, *::before{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-size: 1.125rem;
-    font-family: 'Josefin Sans' , sans-serif;
-    background-color: var(--lightGrayishBlue);
+  font-size: 1.125rem;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--veryDarkDesaturatedBlue);
 }
 
 /* App componenet */
 
-.app > img.mobile-header {
-    position: absolute;
-    z-index: -10;
-    
+/*TodoApp*/
+.TodoApp {
+  width: clamp(0px, 90vw, calc(1440px / 3));
+  margin: 0 auto;
+  padding-top: 5vh;
 }
 
-.app > img.desktop-header {
-display:none;
+.background {
+  background-image: url("./images/bg-mobile-light.jpg");
+  padding: 20px;
+  background-size: cover;
 }
 
-    /*TodoApp*/
-    .TodoApp {
-        width: clamp(0px, 90vw, calc(1440px/3));
-        margin: 0 auto;
-        padding-top: 5vh; 
-    }
-
-    .flex-container {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .moon{
-      height: 20px;
-      width: 20px;
-    }
-    
-    .app-header {
-      text-transform: uppercase;
-      letter-spacing: 0.3rem;
-      color: white;
-    }
-
-    
-    .filter {
-        display:flex;
-        justify-content: space-evenly;
-        margin-top: 3vh;
-    --lightGrayishBlue: hsl(233, 11%, 84%);
-        background-color: var(--veryLightGray);
-        height: 7vh;
-        align-items:center
-    }
-
-    .filter button {
-        border: none;
-        cursor: pointer;
-        background-color: transparent;
-        text-transform: capitalize;
-    }
-
-    .filter button:hover{
-        color : grey;
-
-    }
-
-
-    /* AddTodo */
-    
-    input.AddTodo {
-    all: unset;
-    width: 80%;
-    display :block;
-    margin:  auto;
-    height: 100%;
-    margin-top: 5vh;
-    font-size: 1rem;
-    background: transparent;
-    color: white;
-    border-bottom: 1px solid white;
-    }
-
-    .AddTodo + .addButton {
-        display: block;
-        margin: 0 auto;
-        margin-top: 2vh;
-        padding:3px;
-        padding-left: 10px;
-        padding-right: 10px;
-        background-color: white;
-        border-radius: 5px;
-    }
-
-    .addButton:hover {
-        background-color: transparent;
-        color: white;
-    }
-
-    /* ListTodo */
-    
-   .ListTodo {
-    border-radius: 5px;
-    overflow: hidden;
-    margin-top: 7vh;
+.app-header {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: white;
+  text-align: center;
 }
 
-    /* TodoItem */
-    .TodoItem {
-        display: flex;
-        height: "7vh";
-        padding: 12px; 
-        background-color: var(--veryLightGray);
-        justify-content : space-between;
-        margin-bottom: 2px;
-    }
+.filter {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3vh;
 
-    .TodoItem  input[type='checkbox'] {
-        margin-right: 15px;
-    }
+  background-color: var(--veryLightGray);
+  height: 7vh;
+  align-items: center;
+}
 
-    .TodoItem input:checked + label {
-        text-decoration: line-through;
-        color: lightgrey;
-    }
+.filter button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: capitalize;
+}
 
-    .TodoItem label {
-        padding: 10px;
-        cursor: pointer;
-        text-transform: capitalize;
-    }
-    
-    .TodoItem label:hover {
-        color: grey;
-      
-    }
-    .TodoItem button {
-        border: none;
-        cursor: pointer;
-        background-color: transparent;
-    }
-    .TodoItem button:hover {
-        color:hsl(0, 86%, 57%)
-    }
-    @media (min-width: 375px){ 
-                
-        .app > img.mobile-header {
-            display:none;
-        }
-        .app > img.desktop-header{
-            display:block;
-            position: absolute;
-            z-index: -10;
-          
-            
-        }
-    
-    }
+.filter button:hover {
+  color: grey;
+}
 
-    
-    
-    
+/* AddTodo */
+
+input.AddTodo {
+  all: unset;
+  width: 80%;
+  display: block;
+  margin: auto;
+  height: 100%;
+  margin-top: 5vh;
+  font-size: 1rem;
+  background: transparent;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.AddTodo + .addButton {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2vh;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.addButton:hover {
+  background-color: transparent;
+  color: white;
+}
+
+/* ListTodo */
+
+.ListTodo {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 7vh;
+}
+
+/* TodoItem */
+.TodoItem {
+  display: flex;
+  height: "7vh";
+  padding: 12px;
+  background-color: var(--veryLightGray);
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.TodoItem input[type="checkbox"] {
+  margin-right: 15px;
+}
+
+.TodoItem input:checked + label {
+  text-decoration: line-through;
+  color: lightgrey;
+}
+
+.TodoItem label {
+  padding: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.TodoItem label:hover {
+  color: grey;
+}
+.TodoItem button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.TodoItem button:hover {
+  color: hsl(0, 86%, 57%);
+}
